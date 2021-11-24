@@ -20,7 +20,9 @@ int main()
 
 
 
- /*
+    
+    
+
     int liczba;
     cout << "Zadanie 1" << endl;
     do
@@ -256,6 +258,5 @@ int main()
     }
     cout << "Parzyste: " << parz << endl;
     cout << "Nieparzyste: " << nie_parz << endl;
-*/
     return 0;
 }
