@@ -175,17 +175,26 @@ int main()
 
     ///9.1
 
-    int tab_1[10];
+   int tab_1[10];
     int tab_2[10];
+    srand(time(NULL));
 
     for(int i = 0; i < 10; i++)
     {
         tab_1[i] = rand() % 11;
         tab_2[i] = rand() % 11;
     }
-
-    print_tab(tab_1, 10);
-    print_tab(tab_2, 10);
+    for(int i = 0; i < 10; i++)
+    {
+        cout << tab_1[i] << ", ";
+    }
+    cout << endl;
+    for(int i = 0; i < 10; i++)
+    {
+        cout << tab_2[i] << ", ";
+    }
+    cout << endl;
+    cout << endl;
 
     for(int i = 0; i < 10; i++)
     {
@@ -200,6 +209,7 @@ int main()
             cout << tab_1[i] << ", ";
     }
     cout << endl;
+    
     ///9.2
     int czy_zawiera = 0;
     for(int i = 0; i < 10; i++)
@@ -256,7 +266,84 @@ int main()
         else
             nie_parz++;
     }
+    //Zad Kol, znaki
     cout << "Parzyste: " << parz << endl;
     cout << "Nieparzyste: " << nie_parz << endl;
+    
+    char znak;
+    while(znak!='a' && znak!='A')
+    {
+    cout<<"Podaj znak 'a' lub 'A': ";
+    cin>>znak;
+    }
+    cout<<"Podano znak a lub A"<<endl;
     return 0;
+    
+    //ZAD Kol, tablica
+    int tab[15];
+    int suma;
+    int isRoznica = 0;
+    int pierwsza;
+    srand(time(NULL));
+    for (int i = 0; i < 15; i++)
+    {
+        tab[i] = rand()%41;
+    }
+
+    //Wypisanie elementów tablicy
+    for (int i = 0; i < 15; i++)
+    {
+        cout << tab[i] << ", ";
+    }
+
+    //Jeśli suma jest większa od 25 to ją wypisz
+     for (int i = 0; i < 15; i++)
+    {
+        if(tab[i]>25)
+            suma += tab[i];
+    }
+    cout << endl;
+    cout << "Suma = " << suma << endl;
+
+    //Sprawdz czy w tab jest para liczb, ktorych roznica = 11
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+        {
+            if(tab[i] - tab[j] == 11 || tab[j] - tab[i] == 11)
+                isRoznica++;
+        }
+    }
+    cout << endl;
+    if(isRoznica > 0)
+        cout<<"W tablicy jest para, ktorej roznica jest 11"<<endl;
+    else
+        cout<<"W tablicy nie ma pary, ktorej roznica jest 11"<<endl;
+
+    //Program zamienia elementy w tablicy wg zasady:
+    //kazdy element jest suma siebie i pierwszego wyrazu
+
+    cout<<"Tablica przed zamiana"<<endl;
+    for (int i = 0; i < 15; i++)
+    {
+        cout << tab[i] << ", ";
+    }
+    cout << endl;
+    cout << endl;
+    cout<<"Tablica po zamianie"<<endl;
+    for (int i = 0; i < 15; i++)
+    {
+        pierwsza = tab[0];
+        for(i = 0;i < 15; i++)
+        {
+            tab[i] += pierwsza;
+        }
+        for(i = 0;i < 15; i++)
+        {
+            cout<<tab[i]<<" ";
+        }
+    }
+    return 0;
+}
+}
 }
