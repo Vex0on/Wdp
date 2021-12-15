@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1638955870 source:c:\users\local\desktop\kokokwium1\wdp10_js_pd\main.cpp
+	<iostream>
+
+1639541370 source:c:\users\jacek\desktop\wdp_js\wdp10_js\wdp10_js_pd\main.cpp
+	<iostream>
+	<time.h>
+
